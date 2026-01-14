@@ -64,17 +64,6 @@ module swift_nft::create_nft {
         &nft.url
     }
 
-    // ===== Events =====
-
-    struct NFTMintedEvent has copy, drop {
-        // The Object ID of the NFT
-        object_id: ID,
-        // The creator of the NFT
-        creator: address,
-        // The name of the NFT
-        name: string::String,
-    }
-
     /// Create a new swift_nft
     public entry fun mint_to_sender(
         name: vector<u8>,
